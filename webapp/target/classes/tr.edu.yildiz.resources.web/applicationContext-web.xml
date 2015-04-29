@@ -12,7 +12,7 @@
 
     <mvc:annotation-driven/>
     <mvc:default-servlet-handler/>
-    <context:component-scan base-package="tr.edu.yildiz"/>
+    <context:component-scan base-package="tr.com.desa"/>
     <import resource="classpath:tr/com/desa/resources/spring/applicationContext.xml"/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

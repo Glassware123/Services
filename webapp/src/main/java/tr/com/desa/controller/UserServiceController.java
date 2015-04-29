@@ -14,7 +14,7 @@ import tr.com.desa.request.UserServiceRequest;
 public class UserServiceController {
     @Autowired
     private UserServiceDao userServiceDao;
-    @RequestMapping(value = "/register",method = RequestMethod.POST)
+    @RequestMapping(value = "/register",method = RequestMethod.POST,consumes = "application/json")
     @ResponseBody
     public void saveUser(@RequestBody UserServiceRequest userServiceRequest){
         UserService userService=new UserService();
