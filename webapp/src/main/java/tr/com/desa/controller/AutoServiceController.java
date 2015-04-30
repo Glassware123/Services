@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import tr.com.desa.dao.AutoServiceDao;
 import tr.com.desa.domain.AutoService;
 import tr.com.desa.request.AutoServiceRequest;
-
 import java.util.List;
 
 @Controller
@@ -17,7 +16,6 @@ import java.util.List;
 public class AutoServiceController {
     @Autowired
     private AutoServiceDao autoServiceDao;
-
     @RequestMapping(value = "/add", method = RequestMethod.POST, consumes = "application/json")
     @ResponseBody
     void addAuto(@RequestBody AutoServiceRequest autoServiceRequest) {
