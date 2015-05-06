@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="autos")
-public class AutoService {
+public class AutoMobile {
     @Id
     @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)

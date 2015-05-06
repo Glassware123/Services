@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import tr.com.desa.dao.AutoServiceDao;
-import tr.com.desa.domain.AutoService;
+import tr.com.desa.domain.AutoMobile;
 import tr.com.desa.request.AutoServiceRequest;
 import java.util.List;
 
@@ -20,17 +20,17 @@ public class AutoServiceController {
     @ResponseBody
     void addAuto(@RequestBody AutoServiceRequest autoServiceRequest) {
         System.out.print("dasdadsa");
-        AutoService autoService = new AutoService();
-        autoService.setPlate(autoServiceRequest.getPlate());
-        autoService.setDeparturePoint(autoServiceRequest.getDeparturePoint());
-        autoService.setDestinationPoint(autoServiceRequest.getDestinationPoint());
-        autoService.setCarry(autoServiceRequest.getCarry());
-        autoServiceDao.addAuto(autoService);
+        AutoMobile autoMobile = new AutoMobile();
+        autoMobile.setPlate(autoServiceRequest.getPlate());
+        autoMobile.setDeparturePoint(autoServiceRequest.getDeparturePoint());
+        autoMobile.setDestinationPoint(autoServiceRequest.getDestinationPoint());
+        autoMobile.setCarry(autoServiceRequest.getCarry());
+        autoServiceDao.addAuto(autoMobile);
     }
     @RequestMapping(value = "/find", method = RequestMethod.POST, consumes = "application/json")
     @ResponseBody
-    List<AutoService> findAuto(@RequestBody AutoServiceRequest autoServiceRequest) {
-        List<AutoService> auto = autoServiceDao.findAutoByPlate(autoServiceRequest.getPlate());
+    List<AutoMobile> findAuto(@RequestBody AutoServiceRequest autoServiceRequest) {
+        List<AutoMobile> auto = autoServiceDao.findAutoByPlate(autoServiceRequest.getPlate());
         return auto;
     }
 }
