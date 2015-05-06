@@ -19,6 +19,7 @@ public class AutoServiceController {
     @RequestMapping(value = "/add", method = RequestMethod.POST, consumes = "application/json")
     @ResponseBody
     void addAuto(@RequestBody AutoServiceRequest autoServiceRequest) {
+        System.out.print("dasdadsa");
         AutoService autoService = new AutoService();
         autoService.setPlate(autoServiceRequest.getPlate());
         autoService.setDeparturePoint(autoServiceRequest.getDeparturePoint());
