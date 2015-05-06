@@ -4,6 +4,9 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="autos")
+/**
+ * TODO replace class name as Automobile or AutomobileEntity
+ */
 public class AutoService {
     @Id
     @Column(name = "ID")
