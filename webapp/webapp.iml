@@ -14,7 +14,7 @@
     <facet type="Spring" name="Spring">
       <configuration>
         <fileset id="fileset" name="Spring Application Context" removed="false">
-          <file>file://$MODULE_DIR$/src/main/resources/tr.edu.yildiz.resources.web/applicationContext-web.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/com.yildizapp.resources.web/applicationContext-web.xml</file>
         </fileset>
       </configuration>
     </facet>

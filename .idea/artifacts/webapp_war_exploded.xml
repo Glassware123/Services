@@ -50,7 +50,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/webapp/target/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/webapp/target/webapp-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="webapp/web/Web" />
     </root>
