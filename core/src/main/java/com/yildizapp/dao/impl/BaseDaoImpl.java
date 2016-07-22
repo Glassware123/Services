@@ -1,5 +1,6 @@
 package com.yildizapp.dao.impl;
 
+import com.yildizapp.domain.OrganizationStatsService;
 import com.yildizapp.domain.UserService;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
@@ -9,6 +10,7 @@ import com.yildizapp.dao.BaseDao;
 
 import javax.transaction.Transactional;
 import java.lang.reflect.ParameterizedType;
+import java.util.ArrayList;
 import java.util.List;
 
 @Repository
@@ -43,6 +45,7 @@ public abstract class BaseDaoImpl<T> implements BaseDao<T> {
     public List<UserService> findUserByUsername(String username){
         return sessionFactory.getCurrentSession().createCriteria(UserService.class).add(Restrictions.eq("username",username)).list();
     }
+
     @Override
     public  void delete(T t){
         sessionFactory.getCurrentSession().delete(t);
@@ -50,4 +53,5 @@ public abstract class BaseDaoImpl<T> implements BaseDao<T> {
     public SessionFactory getSessionFactory() {
         return sessionFactory;
     }
+
 }

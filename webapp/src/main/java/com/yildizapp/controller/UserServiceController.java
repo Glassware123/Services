@@ -19,7 +19,7 @@ public class UserServiceController {
     @Autowired
     private UserServiceDao userServiceDao;
 
-    @RequestMapping(value = "/register",method = RequestMethod.POST,produces = "application/json; charset=iso-8859-1")
+    @RequestMapping(value = "/register",method = RequestMethod.POST,produces = "application/json; charset=UTF-8 ")
     @ResponseBody
     public void saveUser(@RequestBody UserServiceRequest userServiceRequest){
         UserService userService=new UserService();

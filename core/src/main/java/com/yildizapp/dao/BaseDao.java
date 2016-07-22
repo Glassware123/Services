@@ -15,4 +15,5 @@ public interface BaseDao<T> {
     List<UserService> findUserByUsername(String username);
 
     void delete (T t);
+
 }
